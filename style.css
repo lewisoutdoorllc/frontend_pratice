@@ -1,0 +1,152 @@
+body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:  hsl(233, 47%, 7%);
+    /* background-color: yellowgreen; */
+    height: 100vh;
+    width: 100vw;
+}
+
+h1, h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Lexend Deca', sans-serif; */
+
+.main-card {
+    display: flex;
+    border-radius: 5px;
+    background-color: hsl(244, 38%, 16%);
+    height:75vh;
+    width:75vw;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+    color: hsl(0, 0%, 100%);
+}
+
+.header h1 {
+    margin-bottom: 27px;
+    font-size: 40px;
+}
+
+.header p {
+    line-height: 1.5;
+    margin-bottom: 44px;
+    width: 80%;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+
+.header span {
+    color: purple;
+    font: bold;
+}
+
+.stats {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.stats span {
+    margin-left: 1px;
+}
+
+.stats > div {
+    margin-right: 75px;
+}
+
+.stats > div:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+.stats h2 {
+    margin-bottom: -5px;
+}
+
+.stats p {
+    font-size: 0.75em;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.image-shot {
+    display: flex;
+    width: 50%;
+    margin: 0;
+    object-fit: cover;
+    border-radius: 0 5px 5px 0;
+}
+/* background: linear-gradient(#3204fdba, #9907facc), url(./images/image-header-desktop.jpg); */
+/* background-color: hsl(277, 64%, 61%); */
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 100px auto;
+    }
+    .main-card {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 50vw;
+        height: 100vh;
+    }
+    .info {
+        text-align: center;
+        margin: 22px 22px auto 22px;
+    }
+    .header p {
+        width: 85%;
+        margin: 20px auto;
+    }
+    .stats{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .stats > div {
+        margin: 0px;
+    }
+    .main-card .image-shot {
+        background-image: url("./images/image-header-mobile.jpg");
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: 350px;
+    }
+    .stats > div {
+        margin: 14px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .main-card {
+        width: 85vw;
+        height: 100vh;
+    }
+    .info {
+        margin: 22px 22px auto 22px;
+    }
+    .header h1 {
+        font-size: 30px;
+    }
+    .header p {
+        width: 85%;
+        margin: 20px auto;
+    }
+    .stats{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-card .image-shot {
+        height: 250px;
+    }
+}
